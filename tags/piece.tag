@@ -1,6 +1,6 @@
 
 <piece>
-  <div class="container">
+  <div class="container" style="background-image: {background}">
     <div class="container-inner">
       <div class="info">
         <div class="info-text">
@@ -10,7 +10,7 @@
         </div>
         <div class="info-pic">
           <img src={image} alt={name}>
-          <button type="button" name="button">View</button>
+          <a type="button" name="button" href={link}>View</a>
           <div class="info-shade"></div>
         </div>
       </div>
@@ -24,7 +24,6 @@
   .container {
     width: 100%;
     height: 100%;
-    background-image: url(./img/1.jpg);
     background-position: center;
     background-repeat: no-repeat;
     -webkit-background-size: cover;
@@ -48,7 +47,10 @@
   }
 
   .container-inner {
-    background: rgba(0, 0, 0, 0.4);
+    /*background: rgba(0, 0, 0, 0.4);*/
+    background: -moz-radial-gradient(center, ellipse cover, rgba(30,30,30,0) 0%, rgba(30,30,30,0) 1%, rgba(30,30,30,0.65) 100%); /* FF3.6-15 */
+    background: -webkit-radial-gradient(center, ellipse cover, rgba(30,30,30,0) 0%,rgba(30,30,30,0) 1%,rgba(30,30,30,0.65) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: radial-gradient(ellipse at center, rgba(30,30,30,0) 0%,rgba(30,30,30,0) 1%,rgba(30,30,30,0.65) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
     height: 100%;
   }
 
@@ -74,6 +76,10 @@
     flex-basis: 2;
     min-width: 400px;
     margin-bottom: 30%;
+  }
+
+  .info-text h1 {
+    text-transform: uppercase;
   }
 
   .info-text button {
@@ -104,6 +110,7 @@
     transition: all 0.3s;
     transform: translate3d(0, 0, 0);
     position: relative;
+    filter: brightness(0.9);
   }
 
   .info-shade {
@@ -122,7 +129,7 @@
     cursor: pointer;
   }
 
-  .info-pic button {
+  .info-pic a {
     position: absolute;
     margin-top: -22.5px;
     top: 50%;
@@ -134,22 +141,23 @@
     z-index: 1000;
     color: #fff;
     opacity: 0;
-    transition: all .3s
+    transition: all .3s;
+    text-decoration: none;
   }
 
-  .info-pic button:hover {
+  .info-pic a:hover {
     opacity: 1;
     background: rgba(190, 190, 190, 0.3);
     cursor: pointer;
   }
 
 
-  .info-pic img:hover + button {
+  .info-pic img:hover + a {
     opacity: 1;
     -webkit-backdrop-filter: blur(2px);
   }
 
-  .info-pic button:hover + .info-shade {
+  .info-pic a:hover + .info-shade {
     display: block;
     opacity: 1;
   }
