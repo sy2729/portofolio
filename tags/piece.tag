@@ -84,6 +84,13 @@
   .info-pic img{
     width: 99%;
     height: auto;
+    transition: all 0.3s;
+    transform: translate3d(0, 0, 0);
+  }
+
+  .info-pic img:hover {
+    transform: scale(1.01);
+    cursor: pointer;
   }
 
   </style>
