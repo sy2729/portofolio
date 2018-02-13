@@ -21,8 +21,9 @@
   <style>
   .container {
     width: 100%;
-    height: 700px;
+    height: 100%;
     background-image: url(./img/1.jpg);
+    background-position: center;
     background-repeat: no-repeat;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -53,10 +54,10 @@
     }
 
   .info-text {
-    height: 100%;
+    /*height: 100%;*/
     flex-basis: 2;
     min-width: 400px;
-    padding: 100px 0;
+    margin-top: 10%;
   }
 
   .info-text button {
