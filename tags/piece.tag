@@ -57,7 +57,7 @@
     /*height: 100%;*/
     flex-basis: 2;
     min-width: 400px;
-    margin-top: 10%;
+    margin-bottom: 30%;
   }
 
   .info-text button {

@@ -3,7 +3,6 @@
   <piece each={project}></piece>
 
 
-
   <script>
     this.project = [
       {
