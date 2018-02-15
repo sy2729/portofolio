@@ -1,12 +1,12 @@
 
 <piece>
-  <div class="container" style="background-image: {background}">
+  <div class="container">
     <div class="container-inner">
       <div class="info">
         <div class="info-text">
           <h1>{name}</h1>
           <p>{description}</p>
-          <button type="button" name="button">Description</button>
+          <button type="button" name="button" onclick={openDescrip}>Description</button>
         </div>
         <div class="info-pic">
           <img src={image} alt={name}>
@@ -17,7 +17,10 @@
     </div>
   </div>
   <script>
-
+    this.openDescrip = function() {
+      this.parent.descripShow = true;
+      this.parent.update();
+    }
   </script>
 
   <style>
@@ -31,26 +34,17 @@
     -o-background-size: cover;
     background-size: cover;
     animation: fadein 3s ease-in-out;
-  }
-
-  @keyframes fadein {
-    from {
-      filter: blur(1px);
-      filter: grayscale(1);
-      filter: opacity(0);
-    }
-    to {
-      filter: blur(0px);
-      filter: grayscale(0);
-      filter: opacity(1);
-    }
+    border: 1px solid #222;
+    background: #fff;
+    /*background-image: url(../img/1.jpg);*/
+    /*style="background-image: {background}"*/
   }
 
   .container-inner {
     /*background: rgba(0, 0, 0, 0.4);*/
-    background: -moz-radial-gradient(center, ellipse cover, rgba(30,30,30,0) 0%, rgba(30,30,30,0) 1%, rgba(30,30,30,0.65) 100%); /* FF3.6-15 */
-    background: -webkit-radial-gradient(center, ellipse cover, rgba(30,30,30,0) 0%,rgba(30,30,30,0) 1%,rgba(30,30,30,0.65) 100%); /* Chrome10-25,Safari5.1-6 */
-    background: radial-gradient(ellipse at center, rgba(30,30,30,0) 0%,rgba(30,30,30,0) 1%,rgba(30,30,30,0.65) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    background: -moz-radial-gradient(center, ellipse cover, rgba(30,30,30,0) 0%, rgba(30,30,30,0.45) 100%); /* FF3.6-15 */
+    background: -webkit-radial-gradient(center, ellipse cover, rgba(30,30,30,0) 0%,rgba(30,30,30,0.45) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: radial-gradient(ellipse at center, rgba(30,30,30,0) 0%,rgba(30,30,30,0.45) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
     height: 100%;
   }
 
@@ -102,6 +96,7 @@
     width: 40%;
     min-width: 300px;
     position: relative;
+    /*box-shadow: 5px 5px 25px 5px rgba(255, 255, 255, 0.5);*/
   }
 
   .info-pic img{

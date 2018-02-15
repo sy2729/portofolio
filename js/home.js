@@ -1,26 +1,3 @@
 
-riot.tag2('home', '<piece each="{project}"></piece>', '', '', function(opts) {
-    this.project = [
-      {
-        name: "GYL Learning Platform",
-        description: "A better way to self-taught programming in a fast pace",
-        image: "./img/gyl1.jpg",
-        background: "url('./img/gyl1.jpg')",
-        link: "http://esite.io/projects/D02229f6761fd1849f270a18dec7d02a5/site/index.html"
-      },
-      {
-        name: "Second-Hand Market",
-        description: "Trade Gracefully with your second-hand exhibition",
-        image: "./img/market1.jpg",
-        background: "url('./img/market1.jpg')",
-        link: "https://sy2729.github.io/second-hand-market/"
-      },
-      {
-        name: "Renited",
-        description: "A real-time SaaS ERP platform for tomorrow's small business.",
-        image: "./img/renited.jpg",
-        background: "url('./img/renited.jpg')",
-        link: "http://renited.io/welcome"
-      }
-    ]
+riot.tag2('home', '<div class="container"> <h1>Hi there from the home.tag</h1> <h1>I can learn <span id="spin"></span> </h1> </div>', 'home p,[data-is="home"] p{ color: #000; } home h1,[data-is="home"] h1{ color: #fff; padding: 10% 10%; } home #spin,[data-is="home"] #spin{ position: relative; } home #spin:after,[data-is="home"] #spin:after{ content: ""; animation: change 10s ease-in-out infinite; } @keyframes change { 0% { content: "HTML"; } 20% { content: "CSS"; } 40% { content: "ES6"; } 60% { content: "RIOT"; } 80% { content: "VUE"; } 100% { content: "Firebase"; } } home .container,[data-is="home"] .container{ width: 100%; height: 100%; background-position: center; background-repeat: no-repeat; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; animation: fadein 3s ease-in-out; border: 1px solid #222; background-image: url(../img/1.jpg); }', '', function(opts) {
 });
