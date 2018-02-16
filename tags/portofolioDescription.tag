@@ -1,12 +1,24 @@
-<portofolio-description>
+<portofolioDescription>
   <div class="container">
     <div class="close" onclick={close}>
         <i class="fa fa-times"></i>
     </div>
-    lorem
+    <div class="description-info-wrap">
+      <div class="description-info-each" each = {descripInfo}>
+        <p>{descriptionWords}</p>
+        <img src={image} alt="">
+      </div>
+    </div>
   </div>
 
   <script>
+
+    this.on('update', function() {
+      this.descripInfo = this.parent.infoPassedToDescrip;
+      console.log(this.descripInfo.image)
+    })
+
+
     this.close = function() {
       this.parent.descripShow = false;
       this.parent.update();
@@ -25,11 +37,10 @@
       height:90%;
       background: #fff;
       animation: fadein 2s ease-in-out;
+      overflow: auto;
     }
 
     .close {
-      margin: 10px;
-      float: right;
       font-size: 15px;
       background: transparent;
       width: 50px;
@@ -39,7 +50,10 @@
       justify-content: center;
       align-items: center;
       transition: all .4s;
-      overflow: hidden;
+      position: absolute;
+      right: 10px;
+      top: 10px;
+      z-index: 100;
     }
 
     .close:hover {
@@ -55,6 +69,26 @@
       color: #222;
       font-size: 20px;
     }
+
+    .description-info-each {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      padding: 40px 0;
+      position: relative;
+      z-index: 99;
+    }
+
+    .description-info-each p {
+      max-width: 300px;
+      min-width: 100px;
+    }
+
+    .description-info-each img{
+      width: 50%;
+      align-self: center
+
+    }
   </style>
 
-</portofolio-description>
+</portofolioDescription>

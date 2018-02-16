@@ -24,11 +24,38 @@
     }
 
     #spin:after {
-      content: "";
+      content: "and play";
       animation: change 10s ease-in-out infinite;
+      -webkit-animation: change 10s ease-in-out infinite;
     }
 
     @keyframes change {
+      0% {
+        content: "HTML";
+      }
+
+      20% {
+        content: "CSS";
+      }
+
+      40% {
+        content: "ES6";
+      }
+
+      60% {
+        content: "RIOT";
+      }
+
+      80% {
+        content: "VUE";
+      }
+
+      100% {
+        content: "Firebase";
+      }
+    }
+
+    @-webkit-keyframes change {
       0% {
         content: "HTML";
       }

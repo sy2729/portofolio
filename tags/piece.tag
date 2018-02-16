@@ -9,7 +9,7 @@
           <button type="button" name="button" onclick={openDescrip}>Description</button>
         </div>
         <div class="info-pic">
-          <img src={image} alt={name}>
+          <img src={image[0]} alt={name}>
           <a type="button" name="button" href={link}>View</a>
           <div class="info-shade"></div>
         </div>
@@ -17,10 +17,29 @@
     </div>
   </div>
   <script>
-    this.openDescrip = function() {
+
+    this.openDescrip = function(event) {
+      this.parent.infoPassedToDescrip = event.item.descriptionPassed;
       this.parent.descripShow = true;
       this.parent.update();
+      this.parent.tags.portofoliodescription.update();
     }
+
+    // console.log(this)
+
+    var changeImage = function() {
+      setInterval(function() {
+        // console.log(this)
+      }, 1000)
+    };
+
+    this.on("mount", function() {
+      changeImage();
+    })
+
+    this.on("unmount", function() {
+      changeImage = null;
+    })
   </script>
 
   <style>
@@ -34,7 +53,7 @@
     -o-background-size: cover;
     background-size: cover;
     animation: fadein 3s ease-in-out;
-    border: 1px solid #222;
+    /*border: 1px solid #222;*/
     background: #fff;
     /*background-image: url(../img/1.jpg);*/
     /*style="background-image: {background}"*/
@@ -42,9 +61,10 @@
 
   .container-inner {
     /*background: rgba(0, 0, 0, 0.4);*/
-    background: -moz-radial-gradient(center, ellipse cover, rgba(30,30,30,0) 0%, rgba(30,30,30,0.45) 100%); /* FF3.6-15 */
-    background: -webkit-radial-gradient(center, ellipse cover, rgba(30,30,30,0) 0%,rgba(30,30,30,0.45) 100%); /* Chrome10-25,Safari5.1-6 */
-    background: radial-gradient(ellipse at center, rgba(30,30,30,0) 0%,rgba(30,30,30,0.45) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    /*background: -moz-radial-gradient(center, ellipse cover, rgba(30,30,30,0) 0%, rgba(30,30,30,0.45) 100%);
+    background: -webkit-radial-gradient(center, ellipse cover, rgba(30,30,30,0) 0%,rgba(30,30,30,0.45) 100%);
+    background: radial-gradient(ellipse at center, rgba(30,30,30,0) 0%,rgba(30,30,30,0.45) 100%);*/
+    background: #ccc;
     height: 100%;
   }
 
@@ -95,6 +115,8 @@
     flex-basis: 1;
     width: 40%;
     min-width: 300px;
+    position: relative;
+    overflow: hidden;
     position: relative;
     /*box-shadow: 5px 5px 25px 5px rgba(255, 255, 255, 0.5);*/
   }

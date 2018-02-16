@@ -8,7 +8,7 @@
   <script>
     var that = this;
     this.page = "home";
-    console.log(this)
+    // console.log(this)
 
     var Router = route.create();
     Router('*', function(page) {
@@ -17,7 +17,7 @@
     })
 
     this.on("update", function() {
-      console.log(this.page)
+      // console.log(this.page)
     })
 
     route.start(true)
