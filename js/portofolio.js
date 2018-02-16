@@ -7,7 +7,7 @@ riot.tag2('portofolio', '<piece each="{project}"></piece> <portofoliodescription
       {
         name: "GYL Learning Platform",
         description: "A better way to self-taught programming in a fast pace",
-        image: ["./img/gyl1.jpg","./img/market2.jpg"],
+        image: ["./img/gyl1.jpg","./img/gyl2.jpg"],
         background: "url('./img/gyl1.jpg')",
         link: "http://esite.io/projects/D02229f6761fd1849f270a18dec7d02a5/site/index.html",
         descriptionPassed: [
@@ -41,7 +41,7 @@ riot.tag2('portofolio', '<piece each="{project}"></piece> <portofoliodescription
       {
         name: "Renited",
         description: "A real-time SaaS ERP platform for tomorrow's small business.",
-        image: ["./img/renited.jpg","./img/market2.jpg"],
+        image: ["./img/renited.jpg","./img/renited2.jpg"],
         background: "url('./img/renited.jpg')",
         link: "http://renited.io/welcome",
         descriptionPassed: [

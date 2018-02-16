@@ -9,7 +9,7 @@
           <button type="button" name="button" onclick={openDescrip}>Description</button>
         </div>
         <div class="info-pic">
-          <img src={image[0]} alt={name}>
+          <img src={i} alt={name} each = {i in image} class="animate-slide">
           <a type="button" name="button" href={link}>View</a>
           <div class="info-shade"></div>
         </div>
@@ -18,6 +18,8 @@
   </div>
   <script>
 
+    var that = this;
+
     this.openDescrip = function(event) {
       this.parent.infoPassedToDescrip = event.item.descriptionPassed;
       this.parent.descripShow = true;
@@ -25,21 +27,36 @@
       this.parent.tags.portofoliodescription.update();
     }
 
-    // console.log(this)
+    console.log(this)
 
-    var changeImage = function() {
-      setInterval(function() {
-        // console.log(this)
-      }, 1000)
-    };
+    // try to createt the causole but failed
+
+    // this.index = 0;
+    //
+    // this.sliderAnimate = function() {
+    //   var imageGroup = document.querySelectorAll("img");
+    //   for(let i = 0; i < imageGroup.length; i++) {
+    //     imageGroup[i].style.display = "none";
+    //   };
+    //   that.index++;
+    //   if(that.index > imageGroup.length) { that.index = 0;};
+    //   imageGroup[that.index-1].style.display = "block";
+    //   setTimeout(that.sliderAnimate, 2000)
+    // }
+
+
+
+    // var changeImage = function() {
+    //   setInterval(function() {
+    //     // console.log(this)
+    //   }, 1000)
+    // };
 
     this.on("mount", function() {
-      changeImage();
+      // changeImage();
+      // that.sliderAnimate();
     })
 
-    this.on("unmount", function() {
-      changeImage = null;
-    })
   </script>
 
   <style>
@@ -53,19 +70,19 @@
     -o-background-size: cover;
     background-size: cover;
     animation: fadein 3s ease-in-out;
-    /*border: 1px solid #222;*/
     background: #fff;
     /*background-image: url(../img/1.jpg);*/
     /*style="background-image: {background}"*/
   }
 
   .container-inner {
-    /*background: rgba(0, 0, 0, 0.4);*/
-    /*background: -moz-radial-gradient(center, ellipse cover, rgba(30,30,30,0) 0%, rgba(30,30,30,0.45) 100%);
-    background: -webkit-radial-gradient(center, ellipse cover, rgba(30,30,30,0) 0%,rgba(30,30,30,0.45) 100%);
-    background: radial-gradient(ellipse at center, rgba(30,30,30,0) 0%,rgba(30,30,30,0.45) 100%);*/
-    background: #ccc;
     height: 100%;
+    background-image: -ms-linear-gradient(top, #4D5C74 0%, #36445A 100%);
+    background-image: -moz-linear-gradient(top, #4D5C74 0%, #36445A 100%);
+    background-image: -o-linear-gradient(top, #4D5C74 0%, #36445A 100%);
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #4D5C74), color-stop(100, #36445A));
+    background-image: -webkit-linear-gradient(top, #4D5C74 0%, #36445A 100%);
+    background-image: linear-gradient(to bottom, #4D5C74 0%, #36445A 100%);
   }
 
   .container-inner h1, p{
@@ -119,22 +136,25 @@
     overflow: hidden;
     position: relative;
     /*box-shadow: 5px 5px 25px 5px rgba(255, 255, 255, 0.5);*/
+    display: flex;
   }
 
   .info-pic img{
-    width: 99%;
+    width: 99.999%;
     height: auto;
     transition: all 0.3s;
     transform: translate3d(0, 0, 0);
     position: relative;
     filter: brightness(0.9);
+    align-self: center;
+    /*padding-right: 0 10px;*/
   }
 
   .info-shade {
     position: absolute;
     top: 0;
-    width: 99%;
-    height: 99%;
+    width: 100%;
+    height: 100%;
     background: rgba(225, 225, 225, 0.3);
     display: none;
     opacity: 0;
@@ -177,6 +197,28 @@
   .info-pic a:hover + .info-shade {
     display: block;
     opacity: 1;
+  }
+
+  .animate-slide {
+    animation: slide 15s ease-in-out infinite;
+  }
+
+  @keyframes slide {
+    0%{
+      transform: translateX(0%);
+    }
+    25%{
+      transform: translateX(-100%);
+    }
+    50%{
+      transform: translateX(-100%);
+    }
+    75%{
+      transform: translateX(0%);
+    }
+    100%{
+      transform: translateX(0%);
+    }
   }
 
   </style>
