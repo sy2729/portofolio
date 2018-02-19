@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
   <title>Shuai Yuan's Portofolio</title>
+  <link href="https://fonts.googleapis.com/css?family=Anton|Roboto" rel="stylesheet">
   <link rel="stylesheet" href="">
   <style media="screen">
 
@@ -17,6 +18,14 @@
       background: rgb(50, 50, 50);
     }
 
+    h1 {
+      font-family: 'Anton', sans-serif;
+    }
+
+    p,a {
+      font-family: 'Roboto', sans-serif;
+    }
+
     body::-webkit-scrollbar {
         width: 0.3em;
     }
@@ -28,6 +37,10 @@
     body::-webkit-scrollbar-thumb {
       background-color: #fff;
       /*outline: 1px solid #fff;*/
+    }
+
+    .prevent-scroll {
+      overflow: hidden;
     }
 
 
@@ -100,6 +113,29 @@
       }
 
     }
+
+    /* Prevents Mobile Safari from bumping up font sizes in landscape */
+  @media only screen and (max-device-width: 480px) {
+  	body {
+  		-webkit-text-size-adjust: 100%;
+  		-ms-text-size-adjust: 100%;
+  	}
+  }
+
+  @media only screen and (orientation: landscape) {
+    .container {
+      height: auto !important;
+    }
+    body {
+      height: auto;
+    }
+    html {
+      height: auto;
+    }
+    .info-pic {
+      margin: 10% 0 !important;
+    }
+  }
 
   </style>
 </head>

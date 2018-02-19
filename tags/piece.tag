@@ -8,7 +8,7 @@
           <p>{description}</p>
           <button type="button" name="button" onclick={openDescrip}>Description</button>
         </div>
-        <div class="info-pic">
+        <div class="info-pic" onmousemove={mouseover}>
           <img src={i} alt={name} each = {i in image} class="animate-slide">
           <a type="button" name="button" href={link}>View</a>
           <div class="info-shade"></div>
@@ -25,9 +25,11 @@
       this.parent.descripShow = true;
       this.parent.update();
       this.parent.tags.portofoliodescription.update();
+      document.querySelector('body').classList.add('prevent-scroll')
     }
 
     console.log(this)
+
 
     // try to createt the causole but failed
 
@@ -69,7 +71,7 @@
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    animation: fadein 3s ease-in-out;
+    /*animation: fadein 3s ease-in-out;*/
     background: #fff;
     /*background-image: url(../img/1.jpg);*/
     /*style="background-image: {background}"*/
@@ -77,16 +79,17 @@
 
   .container-inner {
     height: 100%;
-    background-image: -ms-linear-gradient(top, #4D5C74 0%, #36445A 100%);
+    background: #fff;
+    /*background-image: -ms-linear-gradient(top, #4D5C74 0%, #36445A 100%);
     background-image: -moz-linear-gradient(top, #4D5C74 0%, #36445A 100%);
     background-image: -o-linear-gradient(top, #4D5C74 0%, #36445A 100%);
     background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #4D5C74), color-stop(100, #36445A));
     background-image: -webkit-linear-gradient(top, #4D5C74 0%, #36445A 100%);
-    background-image: linear-gradient(to bottom, #4D5C74 0%, #36445A 100%);
+    background-image: linear-gradient(to bottom, #4D5C74 0%, #36445A 100%);*/
   }
 
   .container-inner h1, p{
-    color: #fff;
+    color: #222;
   }
 
   .container-inner p {
@@ -106,7 +109,7 @@
     /*height: 100%;*/
     flex-basis: 2;
     min-width: 400px;
-    margin-bottom: 30%;
+    margin-bottom: 20%;
   }
 
   .info-text h1 {
@@ -117,14 +120,14 @@
     background: transparent;
     transition: all .3s;
     padding: 15px 50px;
-    border: 1px solid #fff;
-    color: #fff;
+    border: 1px solid #222;
+    color: #222;
   }
 
   .info-text button:hover {
     cursor: pointer;
     background: rgba(190, 190, 190, 0.3);
-    color: #fff;
+    color: inherit;
   }
 
 
@@ -155,14 +158,14 @@
     top: 0;
     width: 100%;
     height: 100%;
-    background: rgba(225, 225, 225, 0.3);
-    display: none;
+    background: rgba(0, 0, 0, 0.5);
+    display: block;
     opacity: 0;
     transition: all .3s;
   }
 
   .info-pic img:hover {
-    transform: scale(1.01);
+    /*transform: scale(1.01);*/
     cursor: pointer;
   }
 
@@ -184,22 +187,23 @@
 
   .info-pic a:hover {
     opacity: 1;
-    background: rgba(190, 190, 190, 0.3);
+    background: rgba(240, 240, 240, 0.5);
     cursor: pointer;
   }
 
 
-  .info-pic img:hover + a {
+  .info-pic:hover a {
     opacity: 1;
     -webkit-backdrop-filter: blur(2px);
   }
 
-  .info-pic a:hover + .info-shade {
+  .info-pic:hover .info-shade {
     display: block;
     opacity: 1;
   }
 
   .animate-slide {
+    -webkit-animation: slide 15s ease-in-out infinite;
     animation: slide 15s ease-in-out infinite;
   }
 
@@ -218,6 +222,24 @@
     }
     100%{
       transform: translateX(0%);
+    }
+  }
+
+  @-webkit-keyframes slide {
+    0%{
+      -webkit-transform: translateX(0%);
+    }
+    25%{
+      -webkit-transform: translateX(-100%);
+    }
+    50%{
+      -webkit-transform: translateX(-100%);
+    }
+    75%{
+      -webkit-transform: translateX(0%);
+    }
+    100%{
+      -webkit-transform: translateX(0%);
     }
   }
 

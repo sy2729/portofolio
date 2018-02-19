@@ -22,6 +22,7 @@
     this.close = function() {
       this.parent.descripShow = false;
       this.parent.update();
+      document.querySelector('body').classList.remove('prevent-scroll')
     }
   </script>
 
@@ -38,6 +39,7 @@
       background: #fff;
       animation: fadein 2s ease-in-out;
       overflow: auto;
+      z-index: 100001;
     }
 
     .close {
@@ -53,7 +55,7 @@
       position: absolute;
       right: 10px;
       top: 10px;
-      z-index: 100;
+      z-index: 100002;
     }
 
     .close:hover {
