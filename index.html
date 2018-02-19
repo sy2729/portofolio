@@ -115,14 +115,17 @@
     }
 
     /* Prevents Mobile Safari from bumping up font sizes in landscape */
-  @media only screen and (max-device-width: 480px) {
-  	body {
-  		-webkit-text-size-adjust: 100%;
-  		-ms-text-size-adjust: 100%;
-  	}
-  }
+    @media only screen and (max-device-width: 480px) {
+      	body {
+      		-webkit-text-size-adjust: 100%;
+      		-ms-text-size-adjust: 100%;
+      	}
+    }
 
-  @media only screen and (orientation: landscape) {
+    @media only screen
+    and (min-device-width : 768px)
+    and (max-device-width : 1024px)
+    and (orientation : landscape) {
     .container {
       height: auto !important;
     }
