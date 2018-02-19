@@ -92,7 +92,7 @@
       background-size: cover;
       animation: fadein 3s ease-in-out;
       border: 1px solid #222;
-      background-image: url(../img/1.jpg);
+      background-image: url(https://github.com/sy2729/portofolio/blob/master/img/1.jpg?raw=true);
     }
 
   </style>
