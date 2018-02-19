@@ -26,7 +26,7 @@
     }
 
     .nav-bar a{
-      color: #fff;
+      color: #222;
       display: inline-block;
       padding: 0px 20px;
       text-decoration: none;
@@ -36,14 +36,14 @@
     }
 
     .nav-bar a:not(a:nth-child(0)) {
-      border-right: 1px solid #fff;  /*This doesn't work in Chrome*/
+      border-right: 1px solid #222;  /*This doesn't work in Chrome*/
     }
 
     .nav-bar a:after {
       content: "";
       position: absolute;
       height: 1px;
-      background: #fff;
+      background: #222;
       left: 0;
       bottom: -1px;
       transition: all .3s;
