@@ -7,6 +7,10 @@
           <h1>{name}</h1>
           <p>{description}</p>
           <button type="button" name="button" onclick={openDescrip}>Description</button>
+          <h3>My Role:</h3>
+          <span each = {i in role}>{i} &nbsp;</span>
+          <h3>Technology Used:</h3>
+          <span each= {i in technology}>{i} &nbsp;</span>
         </div>
         <div class="info-pic" onmousemove={mouseover}>
           <img src={i} alt={name} each = {i in image} class="animate-slide">
@@ -71,7 +75,7 @@
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    /*animation: fadein 3s ease-in-out;*/
+    animation: fadein 3s ease-in-out;
     background: #fff;
     /*background-image: url(../img/1.jpg);*/
     /*style="background-image: {background}"*/
@@ -203,21 +207,33 @@
   }
 
   .animate-slide {
-    -webkit-animation: slide 15s ease-in-out infinite;
-    animation: slide 15s ease-in-out infinite;
+    -webkit-animation: slide 30s ease-in-out infinite;
+    animation: slide 30s ease-in-out infinite;
   }
 
   @keyframes slide {
     0%{
       transform: translateX(0%);
     }
+    12.5%{
+      transform: translateX(-100%);
+    }
     25%{
       transform: translateX(-100%);
     }
+    37.5%{
+      transform: translateX(-200%);
+    }
     50%{
+      transform: translateX(-200%);
+    }
+    62.5%{
       transform: translateX(-100%);
     }
     75%{
+      transform: translateX(-100%);
+    }
+    87.5%{
       transform: translateX(0%);
     }
     100%{
@@ -229,13 +245,25 @@
     0%{
       -webkit-transform: translateX(0%);
     }
+    12.5%{
+      -webkit-transform: translateX(-100%);
+    }
     25%{
       -webkit-transform: translateX(-100%);
     }
+    37.5%{
+      -webkit-transform: translateX(-200%);
+    }
     50%{
+      -webkit-transform: translateX(-200%);
+    }
+    62.5%{
       -webkit-transform: translateX(-100%);
     }
     75%{
+      -webkit-transform: translateX(-100%);
+    }
+    87.5%{
       -webkit-transform: translateX(0%);
     }
     100%{

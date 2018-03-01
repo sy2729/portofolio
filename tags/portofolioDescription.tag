@@ -1,8 +1,8 @@
 <portofolioDescription>
+  <div class="close" onclick={close}>
+    <i class="fa fa-times"></i>
+  </div>
   <div class="container">
-    <div class="close" onclick={close}>
-        <i class="fa fa-times"></i>
-    </div>
     <div class="description-info-wrap">
       <div class="description-info-each" each = {descripInfo}>
         <p>{descriptionWords}</p>
@@ -40,9 +40,13 @@
       animation: fadein 2s ease-in-out;
       overflow: auto;
       z-index: 100001;
+      border: 1px solid;
     }
 
     .close {
+      position: fixed;
+      top: 20px;
+      right: 20px;
       font-size: 15px;
       background: transparent;
       width: 50px;
@@ -56,6 +60,7 @@
       right: 10px;
       top: 10px;
       z-index: 100002;
+      animation: fadein 2s ease-in-out;
     }
 
     .close:hover {
@@ -64,7 +69,7 @@
     }
 
     .close:hover{
-      color: #fff !important;
+      color: #fff;
     }
 
     .close i {
