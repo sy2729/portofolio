@@ -6,7 +6,7 @@
     <div class="description-info-wrap">
       <div class="description-info-each" each = {descripInfo}>
         <p>{descriptionWords}</p>
-        <img src={image} alt="">
+        <img src={image} alt="imge to show">
       </div>
     </div>
   </div>
