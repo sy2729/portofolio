@@ -58,6 +58,19 @@
       }
     }
 
+    @keyframes fadeinBlur {
+      from {
+        filter: blur(0px);
+        filter: grayscale(1);
+        filter: opacity(0);
+      }
+      to {
+        filter: blur(4px);
+        filter: grayscale(0);
+        filter: opacity(1);
+      }
+    }
+
 
     /*.fadeIn {
       animation: fadeIn 1s ease-in-out;
@@ -156,6 +169,7 @@
   <script src="js/portofolioDescription.js"></script>
   <script src="js/portofolio.js"></script>
   <script src="js/piece.js"></script>
+  <script src="js/media.js"></script>
   <script src="js/nav.js"></script>
   <script>
     riot.mount("*");

@@ -1,14 +1,15 @@
 
 <nav>
     <div class="nav-bar">
-      <a href="#home">Home</a>
-      <a href="#info">Info</a>
-      <a href="#portofolio">Portofolio</a>
-      <a href="#mediaProduction">Media Production</a>
-      <a href="#more">More</a>
+      <a href="#home" class={ whiteNav: videoPage === "mediaProduction" }>Home</a>
+      <a href="#info" class={ whiteNav: videoPage === "mediaProduction" }>Info</a>
+      <a href="#portofolio" class={ whiteNav: videoPage === "mediaProduction" }>Portofolio</a>
+      <a href="#mediaProduction" class={ whiteNav: videoPage === "mediaProduction" }>Media Production</a>
+      <a href="#more" class={ whiteNav: videoPage === "mediaProduction" }>More</a>
     </div>
-  <script>
 
+  <script>
+    this.videoPage = "";
   </script>
 
   <style>
@@ -33,6 +34,7 @@
       font-size: 1.2em;
       font-weight: 500;
       position: relative;
+      transition: all 2s;
     }
 
     .nav-bar a:not(a:nth-child(0)) {
@@ -56,6 +58,10 @@
       width: 100%;
       -webkit-transform: scaleX(0.6);
       transform: scaleX(0.6);
+    }
+
+    .whiteNav {
+      color: #fff !important;
     }
 
     /*.fadeIn {

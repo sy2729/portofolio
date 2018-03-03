@@ -38,22 +38,22 @@ riot.tag2('portofolio', '<piece each="{project}"></piece> <portofoliodescription
         descriptionPassed: [
           {
             image: "./img/market1.jpg",
-            descriptionWords: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupi"
+            descriptionWords: "International students have to face the cruel reality that most of them would only be able to stay in the city of their universities for only 2 years. So they have to worry about how to deal with their second-hand furnitures or electronics. It's hard to sale their price with a satisfactory price especially they have no advantage in language and are hurried to leave."
           },
           {
             image: "./img/market2.jpg",
-            descriptionWords: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupi"
+            descriptionWords: "So this website is able to provide a space to exhibit their used goods in graceful way. They could upload the goods' pictures and descriptions, set the price and have their contacts attached"
           },
           {
             image: "./img/market3.jpg",
-            descriptionWords: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupi"
+            descriptionWords: "It's currently still in development. I'm still working on it to connect it with server to enable the user login and authentication function."
           }
         ]
       },
       {
         name: "Renited",
         description: "A real-time SaaS ERP platform for tomorrow's small business.",
-        image: ["./img/renited.jpg","./img/renited2.jpg"],
+        image: ["./img/renited.jpg","./img/renited2.jpg", "./img/renited4.jpg"],
         background: "url('./img/renited.jpg')",
         link: "http://renited.io/welcome",
         role: ["Front-end Design", "UX Design"],
@@ -61,11 +61,15 @@ riot.tag2('portofolio', '<piece each="{project}"></piece> <portofoliodescription
         descriptionPassed: [
           {
             image: "./img/renited.jpg",
-            descriptionWords: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupi"
+            descriptionWords: "During my short internship in the Renited Inc., I created some landing pages and help contribute to the user interface beautification of the internal user system"
           },
           {
             image: "./img/renited2.jpg",
-            descriptionWords: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupi"
+            descriptionWords: "It's my first trying to get hands dirty on using gulp and being able to acheive front-end automation and getting more familiar with CSS compiler -- Sass, and realized how efficient and convenient it is."
+          },
+          {
+            image: "./img/renited4.jpg",
+            descriptionWords: "Our team use Vue.js as the front-end framework in production. So in order to modify and improve the user interface, I use the elementUI, a UI framework to assist with the development."
           }
         ]
       }

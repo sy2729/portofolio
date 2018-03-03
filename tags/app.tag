@@ -4,6 +4,7 @@
   <nav></nav>
   <home if={page === "home"}></home>
   <portofolio if={page === "portofolio"}></portofolio>
+  <media if={page==="mediaProduction" }></media>
 
   <script>
     var that = this;
@@ -17,7 +18,11 @@
     })
 
     this.on("update", function() {
-      // console.log(this.page)
+      if(this.page === "mediaProduction") {
+        this.tags.nav.videoPage = "mediaProduction";
+      }else {
+        this.tags.nav.videoPage = "";
+      }
     })
 
     route.start(true)

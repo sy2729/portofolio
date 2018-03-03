@@ -1,5 +1,5 @@
 
-riot.tag2('app', '<nav></nav> <home if="{page === ⁗home⁗}"></home> <portofolio if="{page === ⁗portofolio⁗}"></portofolio>', '', '', function(opts) {
+riot.tag2('app', '<nav></nav> <home if="{page === ⁗home⁗}"></home> <portofolio if="{page === ⁗portofolio⁗}"></portofolio> <media if="{page===⁗mediaProduction⁗}"></media>', '', '', function(opts) {
     var that = this;
     this.page = "home";
 
@@ -10,7 +10,11 @@ riot.tag2('app', '<nav></nav> <home if="{page === ⁗home⁗}"></home> <portofol
     })
 
     this.on("update", function() {
-
+      if(this.page === "mediaProduction") {
+        this.tags.nav.videoPage = "mediaProduction";
+      }else {
+        this.tags.nav.videoPage = "";
+      }
     })
 
     route.start(true)
