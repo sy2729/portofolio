@@ -9,7 +9,6 @@
   <script>
     var that = this;
     this.page = "home";
-    // console.log(this)
 
     var Router = route.create();
     Router('*', function(page) {

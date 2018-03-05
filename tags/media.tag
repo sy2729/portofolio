@@ -114,7 +114,7 @@
     .description {
       max-width: 350px;
       font-weight: 100;
-      font-size: 0.9em;
+      font-size: 0.95em;
       line-height: 2em;
     }
 
