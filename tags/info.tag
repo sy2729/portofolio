@@ -207,7 +207,7 @@
       padding: 10% 2%;
       width: 60%;
       height: 100%;
-      min-width: 400px;
+      min-width: 300px;
       overflow: scroll;
       box-sizing: border-box;
     }
