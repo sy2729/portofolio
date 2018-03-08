@@ -3,16 +3,16 @@
   <div class="container">
     <div class="homePic" ref = "homePic">
       <div class="blurBack"></div>
-      <h1 class="picText">I can learn <span id="spin"></span></h1>
-      <a class="introBtn" href="#info" type="button">More</a>
+      <h1 class="picText">I know <span id="spin"></span></h1>
+      <a class="introBtn" href="#portofolio" type="button">More</a>
     </div>
     <div class="homeText">
       <h1>Welcome</h1>
-      <h2 class="title2">To Shuai Yuan's Home</h2>
+      <h2 class="title2">I'm Shuai Yuan</h2>
       <ul class="intro-li">
-        <li>I do some Web Dev</li>
-        <li>and Web Design</li>
-        <li>Plus Media Production</li>
+        <li>I do Web Dev</li>
+        <li>Web Design</li>
+        <li>and Media Production</li>
       </ul>
       <div class="shape" ref="shape">
         <div class="eyes lefteye"></div>
@@ -155,7 +155,8 @@
 
     .homePic:hover>.blurBack {
       /* background: rgba(20, 20, 20, 0.4); */
-      filter: blur(2px);
+      filter: grayscale(0.7) blur(4px) ;
+      -webkit-filter: grayscale(0.7) blur(4px);
     }
 
     .blurBack {
@@ -172,10 +173,12 @@
       -o-background-size: cover;
       background-size: cover;
       background-image: url(./img/1.jpg);
-      transition:filter .5s;
+      transition: filter .7s;
       transform: translate3d(-1px, -1px, 0);   /* this is to solve the chrome blur picture move 1px issue*/
       border:solid 1px transparent;           /* this is to solve the chrome blur picture move 1px issue*/
       border-width:1px 0 0 1px;             /* this is to solve the chrome blur picture move 1px issue*/
+      filter: grayscale(0.3) blur(0px);
+      -webkit-filter: grayscale(0.3) blur(0px);
     }
 
     .introBtn {
@@ -288,6 +291,7 @@
       list-style: none;
       font-size: 1.2rem;
       line-height: 1.8rem;
+      font-family: 'Roboto', sans-serif;
     }
 
   </style>

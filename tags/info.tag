@@ -8,6 +8,19 @@
     </div>
 
     <div class="resume">
+      <h2 class="title accordion">Skill Stack</h2>
+      <hr>
+      <div class="panel">
+        <ul class="panel-content">
+          <li>Proficiency with new features of HTML5, CSS3, and ES6, understanding of web standard.</li>
+          <li>Familiarity with Bootstrap, JQuery and Sass, ability to quickly create mobile-friendly and responsive prototype.</li>
+          <li>Passion in interaction design and its application in web and mobile, with the assistance of SVG and Canvas.</li>
+          <li>Proficiency with Adobe Creative Suite and Sketch etc., familiarity of using Axure, Principle, and OmniGraffle.</li>
+          <li>Ability of adapt to front-end development environment with experience of using Vue.js and Git.</li>
+          <li>Deep understanding of video production, specifically in post-production and its utilization of motion graphics for creating
+            pleasing interaction with audience.</li>
+        </ul>
+      </div>
       <h2 class="title accordion">Education</h2>
       <hr>
       <div class="panel">
@@ -70,18 +83,6 @@
         <ul class="panel-content">
           <li>Utilized Bootstrap to design and build the demo system as a course project.</li>
           <li>Collaborated with group member to design various functionality to enhance user experience</li>
-        </ul>
-      </div>
-      <h2 class="title accordion">Skill Stack</h2>
-      <hr>
-      <div class="panel">
-        <ul class="panel-content">
-          <li>Proficiency with new features of HTML5, CSS3, and ES6, understanding of web standard.</li>
-          <li>Familiarity with Bootstrap, JQuery and Sass, ability to quickly create mobile-friendly and responsive prototype.</li>
-          <li>Passion in interaction design and its application in web and mobile, with the assistance of SVG and Canvas.</li>
-          <li>Proficiency with Adobe Creative Suite and Sketch etc., familiarity of using Axure, Principle, and OmniGraffle.</li>
-          <li>Ability of adapt to front-end development environment with experience of using Vue.js and Git.</li>
-          <li>Deep understanding of video production, specifically in post-production and its utilization of motion graphics for creating pleasing interaction with audience.</li>
         </ul>
       </div>
       <h2 class="title accordion">Self-Evaluation</h2>
