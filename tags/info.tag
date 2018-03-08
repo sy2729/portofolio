@@ -133,7 +133,9 @@
     .profile {
       display: flex;
       align-items: center;
-      flex: 1 0 auto;
+      -webkit-flex: 1 1 15em;
+      -moz-flex: 1 1 15em;
+      flex: 1 1 15em;
     }
 
     .profile-image {

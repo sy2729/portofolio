@@ -4,7 +4,7 @@
     <div class="homePic" ref = "homePic">
       <div class="blurBack"></div>
       <h1 class="picText">I can learn <span id="spin"></span></h1>
-      <button class="introBtn">More</button>
+      <a class="introBtn" href="#info" type="button">More</a>
     </div>
     <div class="homeText">
       <h1>Welcome</h1>
@@ -179,14 +179,14 @@
     }
 
     .introBtn {
+      text-decoration: none;
       box-sizing: border-box;
       position: absolute;
       background: transparent;
       transition: all .3s;
       -webkit-transition: all .3s;
       width: 130px;
-      height: 45px;
-      padding: 15px 50px;
+      padding: 13px 50px;
       border: 1px solid #fff;
       color: #fff;
       opacity: 0;
