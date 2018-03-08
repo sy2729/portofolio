@@ -1,5 +1,5 @@
 
-riot.tag2('app', '<nav></nav> <home if="{page === ⁗home⁗}"></home> <portofolio if="{page === ⁗portofolio⁗}"></portofolio> <media if="{page===⁗mediaProduction⁗}"></media>', '', '', function(opts) {
+riot.tag2('app', '<nav></nav> <home if="{page === ⁗home⁗}"></home> <info if="{page===⁗info⁗}"></info> <portofolio if="{page === ⁗portofolio⁗}"></portofolio> <media if="{page===⁗mediaProduction⁗}"></media> <more if="{page===⁗more⁗}"></more>', '', '', function(opts) {
     var that = this;
     this.page = "home";
 

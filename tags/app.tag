@@ -3,9 +3,10 @@
 
   <nav></nav>
   <home if={page === "home"}></home>
+  <info if={page==="info" }></info>
   <portofolio if={page === "portofolio"}></portofolio>
   <media if={page==="mediaProduction" }></media>
-
+  <more if={page==="more" }></more>
   <script>
     var that = this;
     this.page = "home";

@@ -156,6 +156,29 @@
         top: 90% !important;
         margin-top: -22.5px !important;
       }
+
+      .picText {
+        margin-left: 15% !important;
+      }
+
+      .shape {
+        transform: translateY(50px) !important;
+      }
+    }
+
+    /* this is for the profile padding in info page */
+    @media only screen and (max-width: 499px) {
+      .profile {
+        padding: 15% 0 5%;
+      }
+
+      .info-container {
+        height: inherit !important;
+      }
+
+      body {
+        background: #fff;
+      }
     }
 
     /* Prevents Mobile Safari from bumping up font sizes in landscape */
@@ -197,10 +220,12 @@
   <script src="https://cdn.jsdelivr.net/npm/riot-route@x.x.x/dist/route.min.js"></script>
   <script src="js/app.js"></script>
   <script src="js/home.js"></script>
+  <script src="js/info.js"></script>
   <script src="js/portofolioDescription.js"></script>
   <script src="js/portofolio.js"></script>
   <script src="js/piece.js"></script>
   <script src="js/media.js"></script>
+  <script src="js/more.js"></script>
   <script src="js/nav.js"></script>
   <script>
     riot.mount("*");

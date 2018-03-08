@@ -43,6 +43,13 @@
         description: "This is my friend's course project on interviewing interesting and inspiring people in NYC, listening to their stories, documenting them and learning from them.",
         videoSrc1: "./video/intro4.mp4",
         youtubeID: "https://www.youtube.com/embed/ALUSbmb9kP4"
+      },
+      {
+        vid: 5,
+        title: "This is a test video - happy birthday video",
+        description: "This is a test video - happy birthday videoThis is a test video - happy birthday videoThis is a test video - happy birthday videoThis is a test video - happy birthday videoThis is a test video - happy birthday videoThis is a test video - happy birthday videoThis is a test video - happy birthday video",
+        videoSrc1: "./video/intro4.mp4",
+        youtubeID: "https://www.youtube.com/embed/ALUSbmb9kP4"
       }
     ]
 
@@ -87,8 +94,8 @@
 
     #changeProject:hover {
       cursor: pointer;
-      background: rgba(190, 190, 190, 0.3);
-      color: inherit;
+      background: rgba(255, 255, 255, 0.3);
+      box-shadow: 2px 2px 12px 5px rgba(255, 255, 255, 0.3);
     }
 
     .content {
