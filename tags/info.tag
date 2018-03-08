@@ -20,6 +20,12 @@
           <li>Deep understanding of video production, specifically in post-production and its utilization of motion graphics for creating
             pleasing interaction with audience.</li>
         </ul>
+        <div class="panel-fill-in" if={skillbarPanel}>
+          <i class="icono-cross" onclick={closeSkill}></i>
+          <div class="skillname" each = {skill in skills}>
+            {skill.name} <span class="skillbar" id={skill.sValue}><span class="skillbar-fill" style={`width: ${this.skill.sValue}%`} id={this.sValue}><span class="skill-value">{this.skill.sValue}%</span></span></span>
+          </div>
+        </div>
       </div>
       <h2 class="title accordion">Education</h2>
       <hr>
@@ -102,6 +108,59 @@
 
 
   <script>
+    this.skills = [
+      {
+        name: "HTML",
+        sValue: 90,
+      },
+      {
+        name: "CSS",
+        sValue: 80,
+      },
+      {
+        name: "JavaScript",
+        sValue: 70,
+      },
+      {
+        name: "Sass",
+        sValue: 70,
+      },
+      {
+        name: "Riot.js",
+        sValue: 80,
+      },
+      {
+        name: "Firebase",
+        sValue: 60,
+      },
+      {
+        name: "Canvas",
+        sValue: 50,
+      },
+      {
+        name: "SVG",
+        sValue: 50,
+      },
+      {
+        name: "Bootstrap",
+        sValue: 80,
+      },
+      {
+        name: "Sketch",
+        sValue: 70,
+      },
+      {
+        name: "Adobe Creative",
+        sValue: 70,
+      },
+    ]
+
+      this.skillbarPanel = true;
+
+      this.closeSkill = function() {
+        this.skillbarPanel = !this.skillbarPanel;
+      }
+
     this.on('mount', function() {
       var acc = document.getElementsByClassName("accordion");
       var i;
@@ -228,6 +287,7 @@
       max-height: 0;
       overflow: hidden;
       transition: max-height 0.3s cubic-bezier(0.82, 0.29, 0.07, 0.7);
+      position: relative;
     }
 
     .main {
@@ -237,6 +297,54 @@
 
     .panel-content {
       font-family: 'Roboto', sans-serif;
+    }
+
+    .panel-fill-in {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      background: rgba(40, 40, 40, 0.9);
+      display: flex;
+      color: #fff;
+      flex-wrap: wrap;
+      overflow: scroll;
+      justify-content: space-around;
+      padding: 25px 5px;
+      font-family: 'Roboto', sans-serif;
+    }
+
+    .skillbar {
+      width: 40%;
+      height: 10px;
+      min-width: 250px;
+      background: transparent;
+      display: block;
+      position: relative;
+      margin-top: 3px;
+    }
+
+    .skillbar-fill {
+      position: absolute;
+      top: 0;
+      height: 10px;
+      background: #aaa;
+    }
+
+    .skill-value {
+      position: absolute;
+      right: -30px;
+      top: -5px;
+    }
+
+    .icono-cross {
+      position: absolute;
+      right: 5%;
+      top: 3%;
+    }
+
+    .icono-cross:hover {
+      cursor: pointer;
     }
     
   </style>
