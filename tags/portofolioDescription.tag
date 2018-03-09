@@ -5,7 +5,7 @@
   <div class="container">
     <div class="description-info-wrap">
       <div class="description-info-each" each = {descripInfo}>
-        <p>{descriptionWords}</p>
+        <p class="descriptionWords">{descriptionWords}</p>
         <img src={image} alt="imge to show">
       </div>
     </div>
@@ -93,7 +93,10 @@
     .description-info-each img{
       width: 50%;
       align-self: center
+    }
 
+    .descriptionWords {
+      font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     }
   </style>
 

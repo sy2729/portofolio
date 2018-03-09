@@ -8,7 +8,7 @@
           <p>{description}</p>
           <button type="button" name="button" onclick={openDescrip}>Description</button>
           <h3>My Role:</h3>
-          <span each = {i in role}>{i} &nbsp;</span>
+          <span each = {i in role}>{i} <span if={role.length > 1}>|</span> &nbsp;</span>
           <h3>Technology Used:</h3>
           <span each= {i in technology}>{i} &nbsp;</span>
         </div>

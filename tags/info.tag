@@ -12,6 +12,7 @@
       <hr>
       <div class="panel">
         <ul class="panel-content">
+          <button class="expandSkill" if={ showSkillPanel} onclick={expandSkill}>Visualize</button>
           <li>Proficiency with new features of HTML5, CSS3, and ES6, understanding of web standard.</li>
           <li>Familiarity with Bootstrap, JQuery and Sass, ability to quickly create mobile-friendly and responsive prototype.</li>
           <li>Passion in interaction design and its application in web and mobile, with the assistance of SVG and Canvas.</li>
@@ -20,11 +21,16 @@
           <li>Deep understanding of video production, specifically in post-production and its utilization of motion graphics for creating
             pleasing interaction with audience.</li>
         </ul>
-        <div class="panel-fill-in" if={skillbarPanel}>
-          <i class="icono-cross" onclick={closeSkill}></i>
-          <div class="skillname" each = {skill in skills}>
-            {skill.name} <span class="skillbar" id={skill.sValue}><span class="skillbar-fill" style={`width: ${this.skill.sValue}%`} id={this.sValue}><span class="skill-value">{this.skill.sValue}%</span></span></span>
-          </div>
+        <div class="panel-fill-in" id={showFillInPanel: showSkillPanel}>
+          <i class="icono-cross closeSkill" onclick={closeSkill} if = {!showSkillPanel}></i>
+            <div class="skillname" each={ skill in skills}>
+              {skill.name}
+              <span class="skillbar" id={skill.sValue}>
+                <span class="skillbar-fill" style={`width: ${this.skill.sValue}%`} id={this.sValue}>
+                  <span class="skill-value">{this.skill.sValue}%</span>
+                </span>
+              </span>
+            </div>
         </div>
       </div>
       <h2 class="title accordion">Education</h2>
@@ -138,8 +144,8 @@
         sValue: 50,
       },
       {
-        name: "SVG",
-        sValue: 50,
+        name: "Adobe Creative",
+        sValue: 70,
       },
       {
         name: "Bootstrap",
@@ -148,17 +154,17 @@
       {
         name: "Sketch",
         sValue: 70,
-      },
-      {
-        name: "Adobe Creative",
-        sValue: 70,
-      },
+      }
     ]
 
-      this.skillbarPanel = true;
+      this.showSkillPanel = false;
 
-      this.closeSkill = function() {
-        this.skillbarPanel = !this.skillbarPanel;
+      this.closeSkill = function () {
+        this.showSkillPanel = !this.showSkillPanel;
+      }
+
+      this.expandSkill = function() {
+        this.showSkillPanel = !this.showSkillPanel;
       }
 
     this.on('mount', function() {
@@ -176,6 +182,7 @@
           }
         });
       }
+      
     })
   </script>
 
@@ -297,6 +304,7 @@
 
     .panel-content {
       font-family: 'Roboto', sans-serif;
+      padding-top: 10px;
     }
 
     .panel-fill-in {
@@ -304,14 +312,16 @@
       width: 100%;
       height: 100%;
       top: 0;
+      right: 0;
       background: rgba(40, 40, 40, 0.9);
-      display: flex;
       color: #fff;
+      font-family: 'Roboto', sans-serif;
+      transition: all .4s;
+      opacity: 1;
+      display: flex;
       flex-wrap: wrap;
       overflow: scroll;
       justify-content: space-around;
-      padding: 25px 5px;
-      font-family: 'Roboto', sans-serif;
     }
 
     .skillbar {
@@ -337,14 +347,32 @@
       top: -5px;
     }
 
-    .icono-cross {
+    .closeSkill{
       position: absolute;
-      right: 5%;
-      top: 3%;
+      right: 0;
+      top: 0;
     }
 
-    .icono-cross:hover {
+    .expandSkill {
+      position: absolute;
+      right: 30px;
+      top: 0;
+      padding: 2px 5px;
+      background: transparent;
+      color: #222;
+      border: 1px solid #222;
+    }
+
+    .closeSkill:hover, .expandSkill:hover {
       cursor: pointer;
+    }
+
+    #showFillInPanel {
+      opacity: 0;
+      width: 20px;
+      right: 0;
+      top: 0;
+      height: 20px;
     }
     
   </style>
