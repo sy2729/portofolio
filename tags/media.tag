@@ -3,6 +3,7 @@
   <video autoplay loop id="video-background" muted plays-inline each = { videoProject } if = {vid === videoId}>
     <source src={ videoSrc1 } type="video/mp4">
   </video>
+  <div class="backupBackground"></div>
   <div class="content" if = {vid === videoId} each= { videoProject }>
     <div class="text">
       <h2>{ title }</h2>
@@ -132,6 +133,15 @@
 
     #youtubeVideo {
       
+    }
+
+    .backupBackground {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: transparent;
     }
   </style>
 </media>

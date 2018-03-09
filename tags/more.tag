@@ -53,6 +53,7 @@
       justify-content: center;
       align-items: center;
       position: relative;
+      overflow: hidden;
     }
 
     h2 {
