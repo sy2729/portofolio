@@ -132,7 +132,7 @@
     }
 
     #youtubeVideo {
-      
+      position: relative;
     }
 
     .backupBackground {
