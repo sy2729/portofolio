@@ -47,10 +47,17 @@
       },
       {
         vid: 5,
-        title: "This is a test video - happy birthday video",
-        description: "This is a test video - happy birthday videoThis is a test video - happy birthday videoThis is a test video - happy birthday videoThis is a test video - happy birthday videoThis is a test video - happy birthday videoThis is a test video - happy birthday videoThis is a test video - happy birthday video",
-        videoSrc1: "./video/intro4.mp4",
-        youtubeID: "https://www.youtube.com/embed/ALUSbmb9kP4"
+        title: "Bachelor Graduation Ceremony Video in CCNU",
+        description: "Right before I graduate from my undergraduate school, I started to learn photography and videography and then made this video to record the great memories of the four years. I used sliders, photography lights, triapod, DSLR to accomplish this video production",
+        videoSrc1: "./video/intro5.mp4",
+        youtubeID: "https://www.youtube.com/embed/ZdtILGuo6IQ"
+      }, 
+      {
+        vid: 6,
+        title: "GH5 Unboxing & Sample Shot Vlog",
+        description: "I got my first GH5, which is a really great video-shooting camera. I shot some great sample videos in V-log mode and color graded them.",
+        videoSrc1: "./video/intro6.mp4",
+        youtubeID: "https://www.youtube.com/embed/-1ZyOfgzbkM"
       }
     ]
 
