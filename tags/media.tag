@@ -122,7 +122,9 @@
 
     .text {
       flex-basis: 2;
-      margin-top: 15%;
+      /* Shouldn't use margin-top percentage on flex items in firefox, not supported */
+      /* margin-top: 15%; */
+      margin-top: 150px;
       min-width: 350px;
       color: #fff;
       box-sizing: border-box;
@@ -142,7 +144,9 @@
 
     iframe {
       flex-basis: 1;
-      margin-top: 20%;
+      /* Shouldn't use margin-top percentage on flex items in firefox, not supported */
+      /* margin-top: 20%;  */
+      margin-top: 200px;
     }
 
     #youtubeVideo {
