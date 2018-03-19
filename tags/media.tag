@@ -1,6 +1,6 @@
 
 <media>
-  <video autoplay loop id="video-background" muted plays-inline each = { videoProject } if = {vid === videoId}>
+  <video autoplay loop id="video-background" muted plays-inline each = { videoProject } if = {vid === videoId} ref="video">
     <source src={ videoSrc1 } type="video/mp4">
   </video>
   <div class="backupBackground"></div>
@@ -58,6 +58,13 @@
         description: "I got my first GH5, which is a really great video-shooting camera. I shot some great sample videos in V-log mode and color graded them.",
         videoSrc1: "./video/intro6.mp4",
         youtubeID: "https://www.youtube.com/embed/-1ZyOfgzbkM"
+      },
+      {
+        vid: 7,
+        title: "Columbia University Chinese Spring Festival Celebration Micro Film",
+        description: "Every year, we Chinese International Students celebrate our Spring Festival in our unique way. This time, we shot a short film reflecting on our intensive life and optimistic attitude towards the future. I was responsible for shooting.",
+        videoSrc1: "./video/intro7.mp4",
+        youtubeID: "https://www.youtube.com/embed/kJ4Ere29BO0"
       }
     ]
 
