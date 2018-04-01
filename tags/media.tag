@@ -1,5 +1,16 @@
 
 <media>
+  <div onclick = { activateSlideIn } if={ !this.slideIn }>
+    <i class="fas fa-list-ul openSlide" ></i>
+  </div>
+  <div class={ sidebar: true, slideIn: slideIn}>
+    <span onclick = { activateSlideIn } if={ this.slideIn }><i class="fas fa-arrow-circle-left closeSlide"></i></span>
+    <div class="bar-wrap">
+      <div each={ video in videoProject } class={bar: true, active: video.vid === videoId} onclick={changeVideo} ><p>
+        { video.title } 
+      </p></div>
+    </div>
+  </div>
   <video autoplay loop id="video-background" muted plays-inline each = { videoProject } if = {vid === videoId} ref="video">
     <source src={ videoSrc1 } type="video/mp4">
   </video>
@@ -17,8 +28,9 @@
 
 
   <script>
+    that = this;
     this.videoId = 1;
-
+    this.slideIn = false;
     this.videoProject = [
       {
         vid: 1,
@@ -68,7 +80,7 @@
       }
     ]
 
-    this.change = function() {
+    change() {
       if (this.videoId < this.videoProject.length) {
         this.videoId++;
       }else {
@@ -76,6 +88,28 @@
       }
 
     }
+
+    changeVideo(e) {
+      this.videoId = e.item.video.vid;
+      this.slideIn = false;
+    }
+
+    activateSlideIn() {
+        this.slideIn = !this.slideIn;
+    }
+
+    // this.on('mount', function() {
+
+    //   that.triggerSlide = function() {
+    //   
+    //     console.log('sdsd');
+        
+    //   }
+    // triggerSlide() {
+
+    // }
+
+    // })
 
   </script>
 
@@ -160,6 +194,63 @@
       left: 0;
       right: 0;
       background: transparent;
+    }
+
+    .sidebar {
+      position: fixed;
+      left: -400px;
+      top: 0;
+      width: 400px;
+      height: 100vh;
+      background: rgba(0, 0, 0, 0.8);
+      color: #fff;
+      box-sizing: border-box;
+      z-index: 1000;
+      transition: all 0.5s;
+    }
+
+    .bar-wrap {
+      overflow: auto;
+    }
+
+    .sidebar.slideIn {
+      left: 0px;
+    }
+
+    .sidebar .bar {
+      padding: 15px 8px;
+      cursor: pointer;
+    }
+    .sidebar .bar > p {
+      line-height: 1.3em;
+    }
+
+    .active {
+      background: rgba(255, 255, 255, 0.5);
+      
+    }
+
+    .bar:hover {
+      background: rgba(255, 255, 255, 0.2);
+    }
+
+    .openSlide, .closeSlide {
+      position: fixed;
+      cursor: pointer;
+      color: #fff;
+      font-size: 30px;
+      z-index: 2000;
+    }
+
+    .openSlide {
+      left: 25px;
+      top: 25px;
+    }
+
+    .closeSlide {
+      position: absolute;
+      right: -40px;
+      top: 24px;
     }
   </style>
 </media>
