@@ -70,4 +70,13 @@ riot.tag2('media', '<div onclick="{activateSlideIn}" if="{!this.slideIn}"> <i cl
         this.slideIn = !this.slideIn;
     }.bind(this)
 
+    this.on('mount', ()=>{
+      var width = window.innerWidth;
+      if(width <= 600) {
+        this.refs.video.removeAttribute('autoplay');
+        this.refs.video.removeAttribute('autoplay');
+        this.refs.video.children[0].removeAttribute('src');
+      }
+
+    })
 });

@@ -7,7 +7,6 @@
   <script>
     this.descripShow = false;
     this.infoPassedToDescrip = {};
-
     this.project = [
       {
         name: "GYL Learning Platform",
@@ -79,6 +78,10 @@
         ]
       }
     ]
+
+    this.on('before-mount', () => {
+        this.project.reverse();
+      })
 
     this.on("update", function(){
       // console.log(this.imagePassedToDescrip)

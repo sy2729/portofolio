@@ -2,7 +2,6 @@
 riot.tag2('portofolio', '<piece each="{project}"></piece> <portofoliodescription if="{descripShow}"></portofolioDescription>', '', '', function(opts) {
     this.descripShow = false;
     this.infoPassedToDescrip = {};
-
     this.project = [
       {
         name: "GYL Learning Platform",
@@ -74,6 +73,10 @@ riot.tag2('portofolio', '<piece each="{project}"></piece> <portofoliodescription
         ]
       }
     ]
+
+    this.on('before-mount', () => {
+        this.project.reverse();
+      })
 
     this.on("update", function(){
 
