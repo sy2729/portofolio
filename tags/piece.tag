@@ -32,7 +32,6 @@
       document.querySelector('body').classList.add('prevent-scroll')
     }
 
-    console.log(this)
 
 
     // try to createt the causole but failed
@@ -75,7 +74,7 @@
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    animation: fadein 3s ease-in-out;
+    animation: fadein .6s ease-in-out;
     background: #fff;
     /*background-image: url(../img/1.jpg);*/
     /*style="background-image: {background}"*/

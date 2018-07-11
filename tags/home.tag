@@ -3,7 +3,7 @@
   <div class="container">
     <div class="homePic" ref = "homePic">
       <div class="blurBack"></div>
-      <h1 class="picText">I know <span id="spin"></span></h1>
+      <!-- <h1 class="picText">I know <span id="spin"></span></h1> -->
       <a class="introBtn" href="#portofolio" type="button">More</a>
     </div>
     <div class="homeText">
@@ -27,12 +27,10 @@
     
     this.on('mount', function() {
       this.refs.homePic.addEventListener("mouseover", function() {
-        console.log(that.refs.shape)
         that.refs.shape.classList.add('shapeAnimate');
       })
 
       this.refs.homePic.addEventListener("mouseout", function () {
-        console.log(that.refs.shape)
         that.refs.shape.classList.remove('shapeAnimate');
       })
     })
@@ -46,72 +44,14 @@
       padding: 10% 10%;
     }
 
-    #spin {
-      position: relative;
-    }
-
-    #spin:after {
-      content: "and play";
-      animation: change 10s ease-in-out infinite;
-      -webkit-animation: change 10s ease-in-out infinite;
-    }
-
-    @keyframes change {
-      0% {
-        content: "HTML";
-      }
-
-      20% {
-        content: "CSS";
-      }
-
-      40% {
-        content: "ES6";
-      }
-
-      60% {
-        content: "RIOT";
-      }
-
-      80% {
-        content: "VUE";
-      }
-
-      100% {
-        content: "Firebase";
-      }
-    }
-
-    @-webkit-keyframes change {
-      0% {
-        content: "HTML";
-      }
-
-      20% {
-        content: "CSS";
-      }
-
-      40% {
-        content: "ES6";
-      }
-
-      60% {
-        content: "RIOT";
-      }
-
-      80% {
-        content: "VUE";
-      }
-
-      100% {
-        content: "Firebase";
-      }
-    }
+    .homeText > h1, .homeText > h2, .homeText > ul {
+      text-align: center;
+    } 
 
     .container {
       width: 100%;
       height: 100%;
-      animation: fadein 3s ease-in-out;
+      animation: fadein .6s ease-in-out;
       background: #fff;
       /* 
       can't use grid for safari support
@@ -173,7 +113,7 @@
       -o-background-size: cover;
       background-size: cover;
       background-image: url(./img/1.jpg);
-      transition: filter .7s;
+      transition: filter .3s;
       transform: translate3d(-1px, -1px, 0);   /* this is to solve the chrome blur picture move 1px issue*/
       border:solid 1px transparent;           /* this is to solve the chrome blur picture move 1px issue*/
       border-width:1px 0 0 1px;             /* this is to solve the chrome blur picture move 1px issue*/

@@ -5,7 +5,7 @@
       <a href="#info" class={ whiteNav: videoPage === "mediaProduction" }>Info</a>
       <a href="#portofolio" class={ whiteNav: videoPage === "mediaProduction" }>Portofolio</a>
       <a href="#mediaProduction" class={ whiteNav: videoPage === "mediaProduction" }>Media Production</a>
-      <a href="#more" class={ whiteNav: videoPage === "mediaProduction" }>More</a>
+      <!-- <a href="#more" class={ whiteNav: videoPage === "mediaProduction" }>More</a> -->
     </div>
 
   <script>

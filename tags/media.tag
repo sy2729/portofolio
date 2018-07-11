@@ -135,8 +135,8 @@
       z-index: -100;
       -webkit-filter: blur(4px) !important;
       filter: blur(4px) !important;
-      -webkit-animation: fadeinBlur 2s ease-in-out;
-      animation: fadeinBlur 2s ease-in-out;
+      -webkit-animation: fadeinBlur .4s ease-in-out;
+      animation: fadeinBlur .4s ease-in-out;
     }
 
     #changeProject {
@@ -227,7 +227,7 @@
     }
 
     .sidebar .bar {
-      padding: 15px 8px;
+      padding: 8px;
       cursor: pointer;
     }
     .sidebar .bar > p {

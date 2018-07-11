@@ -8,104 +8,136 @@
     </div>
 
     <div class="resume">
-      <h2 class="title accordion">Skill Stack</h2>
-      <hr>
-      <div class="panel">
-        <ul class="panel-content">
-          <button class="expandSkill" if={ showSkillPanel} onclick={expandSkill}>Visualize</button>
-          <li>Proficiency with new features of HTML5, CSS3, and ES6, understanding of web standard.</li>
-          <li>Familiarity with Bootstrap, JQuery and Sass, ability to quickly create mobile-friendly and responsive prototype.</li>
-          <li>Passion in interaction design and its application in web and mobile, with the assistance of SVG and Canvas.</li>
-          <li>Proficiency with Adobe Creative Suite and Sketch etc., familiarity of using Axure, Principle, and OmniGraffle.</li>
-          <li>Ability of adapt to front-end development environment with experience of using Vue.js and Git.</li>
-          <li>Deep understanding of video production, specifically in post-production and its utilization of motion graphics for creating
-            pleasing interaction with audience.</li>
-        </ul>
-        <div class="panel-fill-in" id={showFillInPanel: showSkillPanel}>
-          <i class="icono-cross closeSkill" onclick={closeSkill} if = {!showSkillPanel}></i>
-            <div class="skillname" each={ skill in skills}>
-              {skill.name}
-              <span class="skillbar" id={skill.sValue}>
-                <span class="skillbar-fill" style={`width: ${this.skill.sValue}%`} id={this.sValue}>
-                  <span class="skill-value">{this.skill.sValue}%</span>
+      <div class="resume-content">
+        <h2 class="title accordion">Skill Stack</h2>
+        <hr>
+        <div class="panel">
+          <ul class="panel-content">
+            <button class="expandSkill" if={ showSkillPanel} onclick={expandSkill}>Visualize</button>
+            <li>Proficiency with new features of HTML5, CSS3, and ES6, understanding of web standard.</li>
+            <li>Familiarity with Bootstrap, JQuery and Sass, ability to quickly create mobile-friendly and responsive prototype.</li>
+            <li>Passion in interaction design and its application in web and mobile, with the assistance of SVG and Canvas.</li>
+            <li>Proficiency with Adobe Creative Suite and Sketch etc., familiarity of using Axure, Principle, and OmniGraffle.</li>
+            <li>Ability of adapt to front-end development environment with experience of using Vue.js and Git.</li>
+            <li>Deep understanding of video production, specifically in post-production and its utilization of motion graphics for creating
+              pleasing interaction with audience.</li>
+          </ul>
+          <div class="panel-fill-in" id={showFillInPanel: showSkillPanel}>
+            <i class="icono-cross closeSkill" onclick={closeSkill} if = {!showSkillPanel}></i>
+              <div class="skillname" each={ skill in skills}>
+                {skill.name}
+                <span class="skillbar" id={skill.sValue}>
+                  <span class="skillbar-fill" style={`width: ${this.skill.sValue}%`} id={this.sValue}>
+                    <span class="skill-value">{this.skill.sValue}%</span>
+                  </span>
                 </span>
-              </span>
-            </div>
+              </div>
+          </div>
         </div>
-      </div>
-      <h2 class="title accordion">Education</h2>
-      <hr>
-      <div class="panel">
-        <div class="main">
-          <h4 class="subTitle">2013.07-2017.06</h4>
-          <h4 class="subTitle">Central China Normal University</h4>
-          <h4 class="subTitle">Teaching Chinese As A Second Language - Bachelor</h4>
-        </div>
-        <div class="main">
-          <h4 class="subTitle">2017.09-2019.05</h4>
-          <h4 class="subTitle">Teachers College, Columbia University</h4>
-          <h4 class="subTitle">Instructional Technology and Media - Master</h4>
-        </div>
+        <h2 class="title accordion">Education</h2>
+        <hr>
+        <div class="panel">
+          <div class="main">
+            <h4 class="subTitle">2013.07-2017.06</h4>
+            <h4 class="subTitle">Central China Normal University</h4>
+            <h4 class="subTitle">Teaching Chinese As A Second Language - Bachelor</h4>
+          </div>
+          <div class="main">
+            <h4 class="subTitle">2017.09-2019.05</h4>
+            <h4 class="subTitle">Teachers College, Columbia University</h4>
+            <h4 class="subTitle">Instructional Technology and Media - Master</h4>
+          </div>
 
-        <h5>Main Courses:</h5>
-        <p>Interactive Programming, Design Theories, Media Production, Data Visualization, and computational art</p>
-        
-      </div>
-      <h2 class="title accordion">Working Experience</h2>
-      <hr>
-      <div class="panel">
-        <div class="main">
-          <h4 class="subTitle">2017.09-2018.01</h4>
-          <h4 class="subTitle">Renited Inc.</h4>
-          <h4 class="subTitle">Front-End Dev Intern</h4>
+          <h5>Main Courses:</h5>
+          <p>Interactive Programming, Design Theories, Media Production, Data Visualization, and computational art</p>
+          
         </div>
-        <ul class="panel-content">
-          <li>Build company’s new landing page through the Streaming Building System Gulp.</li>
-          <li>Utilize Element UI in combined with Vue.js to beautify the user system, take part in the development of several components.</li>
-          <li>Use CSS framework Bootstrap to modify company’s previous landing page.</li>
-          <li>Communicate and collaborate with the back-end developer and product manager to enhance the user experience.</li>
-        </ul>
-        <div class="main">
-          <h4 class="subTitle">2017.07-2017.08</h4>
-          <h4 class="subTitle">MGC Inc.</h4>
-          <h4 class="subTitle">Content Manager</h4>
+        <h2 class="title accordion">Working Experience</h2>
+        <hr>
+        <div class="panel">
+          <div class="main">
+            <h4 class="subTitle">2018.05-PRESENT</h4>
+            <h4 class="subTitle">Atos</h4>
+            <h4 class="subTitle">UX Designer Intern</h4>
+          </div>
+          <ul class="panel-content">
+            <li>Collaborate with other designers and design web & mobile products from concept to hi-fi prototypes</li>
+            <li>Work with developers and support delivering / QA new features</li>
+            <li>Design marketing materials including marketing website, brochures, videos</li>
+            <li>Support user research and gather feedback from users to improve product design</li>
+          </ul>
+          <div class="main">
+            <h4 class="subTitle">2018.03-2018.05</h4>
+            <h4 class="subTitle">Teachers College, Columbia University</h4>
+            <h4 class="subTitle">Web Developer</h4>
+          </div>
+          <ul class="panel-content">
+            <li>Assist the TC office of the Web in refreshing the college's website, assist the External Affairs Web Office in transferring
+            current websites to the new site template in T4 content management system;</li>
+            <li>Help with quality assurance testing, and other content migration tasks.</li>
+            <li>Help with site style debugging and user experience improvement with CSS solutions.</li>
+          </ul>
+          <div class="main">
+            <h4 class="subTitle">2017.09-2018.01</h4>
+            <h4 class="subTitle">Renited Inc.</h4>
+            <h4 class="subTitle">Front-End Dev Intern</h4>
+          </div>
+          <ul class="panel-content">
+            <li>Build company’s new landing page through the Streaming Building System Gulp.</li>
+            <li>Utilize Element UI in combined with Vue.js to beautify the user system, take part in the development of several components.</li>
+            <li>Use CSS framework Bootstrap to modify company’s previous landing page.</li>
+            <li>Communicate and collaborate with the back-end developer and product manager to enhance the user experience.</li>
+          </ul>
+          <div class="main">
+            <h4 class="subTitle">2017.07-2017.08</h4>
+            <h4 class="subTitle">MGC Inc.</h4>
+            <h4 class="subTitle">Content Manager</h4>
+          </div>
+          <ul class="panel-content">
+            <li>Researched on targeted user of our educational product and scheduled explicit content for advertisement.</li>
+            <li>Participated in some visual design process, including the production of advertisement and poster.
+            </li>
+          </ul>
+          <div class="main">
+            <h4 class="subTitle">2017.01-2017.2017.3</h4>
+            <h4 class="subTitle">CHAOYOUAI Technology Inc.</h4>
+            <h4 class="subTitle">Editor and Media Producer</h4>
+          </div>
+          <ul class="panel-content">
+            <li>Produced audio media and graphic materials for users of the company’s educational application.</li>
+          </ul>
         </div>
-        <ul class="panel-content">
-          <li>Researched on targeted user of our educational product and scheduled explicit content for advertisement.</li>
-          <li>Participated in some visual design process, including the production of advertisement and poster.
-          </li>
-        </ul>
-        <div class="main">
-          <h4 class="subTitle">2017.01-2017.2017.3</h4>
-          <h4 class="subTitle">CHAOYOUAI Technology Inc.</h4>
-          <h4 class="subTitle">Editor and Media Producer</h4>
+        <h2 class="title accordion">Project Experience</h2>
+        <hr>
+        <div class="panel">
+          <div class="main">
+            <h4 class="subTitle">2018.03-05</h4>
+            <h4 class="subTitle">CareGuru</h4>
+            <h4 class="subTitle">Front-end Development</h4>
+          </div>
+          <ul class="panel-content">
+            <li>Use Riot.js and Firebase to design and build the demo system as a course project.</li>
+          </ul>
+          <div class="main">
+            <h4 class="subTitle">2017.09-12</h4>
+            <h4 class="subTitle">GYL Learning System</h4>
+            <h4 class="subTitle">Front-end Development and UX Design</h4>
+          </div>
+          <ul class="panel-content">
+            <li>Utilized Bootstrap to design and build the demo system as a course project.</li>
+            <li>Collaborated with group member to design various functionality to enhance user experience</li>
+          </ul>
         </div>
-        <ul class="panel-content">
-          <li>Produced audio media and graphic materials for users of the company’s educational application.</li>
-        </ul>
-      </div>
-      <h2 class="title accordion">Project Experience</h2>
-      <hr>
-      <div class="panel">
-        <div class="main">
-          <h4 class="subTitle">2017.09-12</h4>
-          <h4 class="subTitle">GYL Learning System</h4>
-          <h4 class="subTitle">Front-end Development and UX Design</h4>
+        <h2 class="title accordion">Self-Evaluation</h2>
+        <hr>
+        <div class="panel">
+          <p>
+            I’m passionate about Web and User Interface design, with close observation of the latest trends in those design fields.
+            I have solid skills in creating design prototype through front-end development and proficiency of using design software.
+            With my pursuit of aesthetic details, I am able to precisely communicate my idea and design thoughts with my clients and
+            partners.
+          </p>
         </div>
-        <ul class="panel-content">
-          <li>Utilized Bootstrap to design and build the demo system as a course project.</li>
-          <li>Collaborated with group member to design various functionality to enhance user experience</li>
-        </ul>
-      </div>
-      <h2 class="title accordion">Self-Evaluation</h2>
-      <hr>
-      <div class="panel">
-        <p>
-           I’m passionate about Web and User Interface design, with close observation of the latest trends in those design fields.
-          I have solid skills in creating design prototype through front-end development and proficiency of using design software.
-          With my pursuit of aesthetic details, I am able to precisely communicate my idea and design thoughts with my clients and
-          partners.
-        </p>
       </div>
     </div>
   </div>
@@ -189,8 +221,8 @@
   <style>
     .info-container {
       width: 100%;
-      height: 100%;
-      animation: fadein 3s ease-in-out;
+      /* height: 100%; */
+      animation: fadein .6s ease-in-out;
       background: #fff;
       display: flex;
       justify-content: space-around;
@@ -213,7 +245,7 @@
       background-size: cover;
       background-position: center;
       border-radius: 50%;
-      border: 1px solid #aaa;
+      border: 1px solid #ddd;
       margin: 0 auto;
       position: relative;
       animation: antiMove 5s cubic-bezier(0.13, 0.5, 0.42, 1) infinite;
@@ -275,8 +307,13 @@
       width: 60%;
       height: 100%;
       min-width: 300px;
-      overflow: scroll;
+      /* overflow: scroll; */
       box-sizing: border-box;
+      /* padding-right: 130px; */
+    }
+
+    .resume > .resume-content {
+      max-width: 400px;
     }
 
     .title {
@@ -320,7 +357,8 @@
       opacity: 1;
       display: flex;
       flex-wrap: wrap;
-      overflow: scroll;
+      overflow-x: hidden;
+      overflow-y: scroll;
       justify-content: space-around;
     }
 

@@ -47,7 +47,7 @@
     .container {
       width: 100%;
       height: 100%;
-      animation: fadein 3s ease-in-out;
+      animation: fadein .6s ease-in-out;
       background: #fff;
       display: flex;
       justify-content: center;

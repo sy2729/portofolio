@@ -37,7 +37,7 @@
       width: 80%;
       height:90%;
       background: #fff;
-      animation: fadein 2s ease-in-out;
+      animation: fadein .5s ease-in-out;
       overflow: auto;
       z-index: 100001;
       border: 1px solid;
